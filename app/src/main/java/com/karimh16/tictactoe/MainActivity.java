@@ -3,6 +3,7 @@ package com.karimh16.tictactoe;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -47,5 +48,12 @@ public class MainActivity extends AppCompatActivity {
                cellID = 9;
                break;
        }
+       playGame(cellID, buttonSelected);
     }
+
+    public void playGame(int cellID, Button button){
+        Log.d("player", String.valueOf(cellID));
+        Log.d("Button", String.valueOf(button.getId()));
+    }
+
 }
