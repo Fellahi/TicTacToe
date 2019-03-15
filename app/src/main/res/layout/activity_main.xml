@@ -12,19 +12,22 @@
             android:id="@+id/bt1"
             android:layout_width="50pt"
             android:layout_height="50pt"
-            android:text="" />
+            android:text=""
+            android:onClick="buttonClicked"/>
 
         <Button
             android:id="@+id/bt2"
             android:layout_width="50pt"
             android:layout_height="50pt"
-            android:text="" />
+            android:text=""
+            android:onClick="buttonClicked"/>
 
         <Button
             android:id="@+id/bt3"
             android:layout_width="50pt"
             android:layout_height="50pt"
-            android:text="" />
+            android:text=""
+            android:onClick="buttonClicked"/>
     </TableRow>
 
     <TableRow android:layout_marginLeft="5pt">
@@ -33,19 +36,22 @@
             android:id="@+id/bt4"
             android:layout_width="50pt"
             android:layout_height="50pt"
-            android:text="" />
+            android:text=""
+            android:onClick="buttonClicked"/>
 
         <Button
             android:id="@+id/bt5"
             android:layout_width="50pt"
             android:layout_height="50pt"
-            android:text="" />
+            android:text=""
+            android:onClick="buttonClicked"/>
 
         <Button
             android:id="@+id/bt6"
             android:layout_width="50pt"
             android:layout_height="50pt"
-            android:text="" />
+            android:text=""
+            android:onClick="buttonClicked"/>
     </TableRow>
 
     <TableRow android:layout_marginLeft="5pt">
@@ -54,19 +60,22 @@
             android:id="@+id/bt7"
             android:layout_width="50pt"
             android:layout_height="50pt"
-            android:text="" />
+            android:text=""
+            android:onClick="buttonClicked"/>
 
         <Button
             android:id="@+id/bt8"
             android:layout_width="50pt"
             android:layout_height="50pt"
-            android:text="" />
+            android:text=""
+            android:onClick="buttonClicked"/>
 
         <Button
             android:id="@+id/bt9"
             android:layout_width="50pt"
             android:layout_height="50pt"
-            android:text="" />
+            android:text=""
+            android:onClick="buttonClicked"/>
     </TableRow>
 
 
