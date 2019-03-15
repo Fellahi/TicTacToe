@@ -15,7 +15,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonClicked(View v){
+        int cellID = 0;
        Button buttonSelected = (Button) v;
        buttonSelected.setBackgroundColor(Color.GREEN);
+       switch (buttonSelected.getId()){
+           case R.id.bt1:
+               cellID = 1;
+               break;
+           case R.id.bt2:
+               cellID = 2;
+               break;
+           case R.id.bt3:
+               cellID = 3;
+               break;
+           case R.id.bt4:
+               cellID = 4;
+               break;
+           case R.id.bt5:
+               cellID = 5;
+               break;
+           case R.id.bt6:
+               cellID = 6;
+               break;
+           case R.id.bt7:
+               cellID = 7;
+               break;
+           case R.id.bt8:
+               cellID = 8;
+               break;
+           case R.id.bt9:
+               cellID = 9;
+               break;
+       }
     }
 }
