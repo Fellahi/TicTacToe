@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
         Log.d("player", String.valueOf(cellID));
 
         if(activePlayer){
-            button.setBackgroundColor(Color.GREEN);
+            button.setBackground(this.getResources().getDrawable(R.drawable.x));
             player1.add(cellID);
         }else{
-            button.setBackgroundColor(Color.BLUE);
+            button.setBackground(this.getResources().getDrawable(R.drawable.o));
             player2.add(cellID);
         }
         button.setEnabled(false);
