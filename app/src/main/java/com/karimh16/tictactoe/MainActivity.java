@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     public void buttonClicked(View v){
         int cellID = 0;
        Button buttonSelected = (Button) v;
-       buttonSelected.setBackgroundColor(Color.GREEN);
        switch (buttonSelected.getId()){
            case R.id.bt1:
                cellID = 1;
@@ -51,9 +52,21 @@ public class MainActivity extends AppCompatActivity {
        playGame(cellID, buttonSelected);
     }
 
+    boolean activePlayer = true; // true - player 1; false - player 2
+    ArrayList<Integer> player1 = new ArrayList<Integer>();
+    ArrayList<Integer> player2 = new ArrayList<Integer>();
+
     public void playGame(int cellID, Button button){
         Log.d("player", String.valueOf(cellID));
-        Log.d("Button", String.valueOf(button.getId()));
+
+        if(activePlayer){
+            button.setBackgroundColor(Color.GREEN);
+            player1.add(cellID);
+        }else{
+            button.setBackgroundColor(Color.BLUE);
+            player2.add(cellID);
+        }
+        activePlayer = !activePlayer;
     }
 
 }
