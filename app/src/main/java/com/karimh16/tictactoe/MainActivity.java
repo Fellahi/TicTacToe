@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             button.setBackgroundColor(Color.BLUE);
             player2.add(cellID);
         }
+        button.setEnabled(false);
         activePlayer = !activePlayer;
     }
 
