@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <TableRow android:layout_marginLeft="5pt">
+    <TableRow
+        android:gravity="center">
 
         <Button
             android:id="@+id/bt1"
@@ -30,7 +32,8 @@
             android:onClick="buttonClicked"/>
     </TableRow>
 
-    <TableRow android:layout_marginLeft="5pt">
+    <TableRow
+        android:gravity="center">
 
         <Button
             android:id="@+id/bt4"
@@ -54,7 +57,8 @@
             android:onClick="buttonClicked"/>
     </TableRow>
 
-    <TableRow android:layout_marginLeft="5pt">
+    <TableRow
+        android:gravity="center">
 
         <Button
             android:id="@+id/bt7"
