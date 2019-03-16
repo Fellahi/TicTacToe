@@ -22,6 +22,8 @@
             android:layout_width="50pt"
             android:layout_height="50pt"
             android:text=""
+            android:layout_marginLeft="4pt"
+            android:layout_marginRight="4pt"
             android:onClick="buttonClicked"/>
 
         <Button
@@ -47,6 +49,8 @@
             android:layout_width="50pt"
             android:layout_height="50pt"
             android:text=""
+            android:layout_marginLeft="4pt"
+            android:layout_marginRight="4pt"
             android:onClick="buttonClicked"/>
 
         <Button
@@ -72,6 +76,8 @@
             android:layout_width="50pt"
             android:layout_height="50pt"
             android:text=""
+            android:layout_marginLeft="4pt"
+            android:layout_marginRight="4pt"
             android:onClick="buttonClicked"/>
 
         <Button
