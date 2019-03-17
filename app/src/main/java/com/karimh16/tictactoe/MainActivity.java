@@ -1,7 +1,9 @@
 package com.karimh16.tictactoe;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> player1 = new ArrayList<Integer>();
     ArrayList<Integer> player2 = new ArrayList<Integer>();
 
+    AlertDialog.Builder builder;
+
     public void playGame(int cellID, Button button) {
         Log.d("player", String.valueOf(cellID));
 
@@ -74,13 +78,30 @@ public class MainActivity extends AppCompatActivity {
         button.setEnabled(false);
         activePlayer = !activePlayer;
         findWinner();
-        if(winner!=-1)
-            if(winner == 0)
-                Toast.makeText(MainActivity.this, "draw", Toast.LENGTH_LONG).show();
-            else if(winner == 1)
-                Toast.makeText(MainActivity.this, "the winner : player 1", Toast.LENGTH_LONG).show();
-            else if(winner == 2)
-                Toast.makeText(MainActivity.this, "the winner : player 2", Toast.LENGTH_LONG).show();
+        if(winner!=-1) {
+            builder = new AlertDialog.Builder(this);
+            builder.setTitle("result");
+            builder.setCancelable(true);
+            builder.setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
+            });
+
+            if (winner == 0)
+                builder.setMessage("draw");
+            else if (winner == 1)
+                builder.setMessage("the winner : player 1");
+            else if (winner == 2)
+                builder.setMessage("the winner : player 2");
+
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
+        }
     }
 
     int winner = -1; //-1 no winner, 1 player 1 won, 2 player 2 won
