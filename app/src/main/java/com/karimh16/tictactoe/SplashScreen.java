@@ -25,7 +25,7 @@ public class SplashScreen extends AppCompatActivity {
                 }catch (Exception e){
                     e.printStackTrace();
                 }finally {
-                    Intent intent = new Intent(SplashScreen.this, TwoPlayers.class);
+                    Intent intent = new Intent(SplashScreen.this, Menu.class);
                     startActivity(intent);
                 }
             }
