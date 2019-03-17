@@ -88,5 +88,14 @@
             android:onClick="buttonClicked"/>
     </TableRow>
 
+    <TableRow
+        android:gravity="center"
+        android:layout_marginTop="20pt">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="RESET"
+            android:onClick="reset"/>
+    </TableRow>
 
 </TableLayout>

@@ -1,5 +1,6 @@
 package com.karimh16.tictactoe;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -68,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
         }
         button.setEnabled(false);
         activePlayer = !activePlayer;
+    }
+
+    public void reset(View view){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
 }
